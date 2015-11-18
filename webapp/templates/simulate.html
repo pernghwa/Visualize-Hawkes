@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block css_head %}
+<link href="{{ url_for('static', filename='css/simulate.css')}}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/nvd3.css')}}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/d3.slider.css')}}" rel="stylesheet">
+{% endblock %}
+{% block js_head %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/d3.v3.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/nvd3.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/d3.slider.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-8">
+      <div id="line-chart" class="col-md-10">
+      </div>
+      <div class="col-md-2">
+        <div class="btn-group-vertical" role="group" aria-label="Close" style="vertical-align:bottom;top:115px">
+          <button id="clear-btn" type="button" class="btn btn-default" >clear data</button>
+          <button id="run-btn" type="button" class="btn btn-success" >run model!</button>
+        </div>
+        <div id="edge-slider" class="d3-slider" style="left:170px;bottom:30px">
+        </div>
+      </div>
+    </div>
+    <div class = "col-md-3">
+              <text id="slidertext">Weight threshold: 0.0</text>
+    <div id="network" class="graph">
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div id="inferred" class="col-md-8"></div>
+    <div id="response" class="col-md-4"></div>
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script>
+  var submit_data_url = "{{url_for('submit_data')}}";
+  </script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/eventDropsPlain.js') }}"></script>
+{% endblock %}

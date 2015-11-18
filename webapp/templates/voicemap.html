@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simulate Network Hawkes</title>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/d3.v3.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/d3.slider.js') }}"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/simulate.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/nvd3.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/d3.slider.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/animate.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/rate_style.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <body>
+  <div id="collapsible-container">
+    <div class="row" id="topic-row" style="margin-left:50px">
+      <div class="page-header">
+        <h3 style="align:center">Topics <small>choose an election topic</small></h3>
+      </div>    
+      <div class="col-lg-8 text-left">
+        <div class="btn-group" style="display:inline-block">
+          <button type="button" class="btn btn-default btn-md" style="width:150px;" id="btn-abortion"> <span>Abortion</span></button>
+          <button type="button" class="btn btn-default btn-md" style="width:150px;" id="btn-mexico"> <span>Mexico</span></button>
+          <button type="button" class="btn btn-default btn-md" style="width:150px;" id="btn-immigration"> <span>Immigration</span></button>
+          <button type="button" class="btn btn-default btn-md" style="width:150px;" id="btn-gun"> <span>Gun Control</span></button>
+          <button type="button" class="btn btn-default btn-md" style="width:150px;" id="btn-benghazi"> <span>Benghazi</span></button>
+        </div>
+      </div>  
+    </div>
+    <div class="row" id="input1-row" style="margin-left:50px">
+      <div class="page-header">
+        <h3 style="align:center">Voice <small>choose campaign voice for topic-related response</small></h3>
+      </div>
+      <div class="col-md-3" id="row1-groups" ></div>
+      <div class="col-md-9" id="row1-entities" ></div>
+    </div>
+    <div class="row" id="input2-row" style="margin-left:50px">
+      <div class="page-header">
+        <h3 style="align:center">Influence <small>choose campaign voice as influence source</small></h3>
+      </div>
+      <div class="col-md-3" id="row2-groups"></div>
+      <div class="col-md-9" id="row2-entities"></div>
+    </div>
+    <div class="row text-center" style="margin-top:30px;">
+      <button id="run-btn" type="button" class="btn btn-success" style="margin-left:50px;margin-bottom:10px">Run Anaylsis!</button>
+    </div>
+  </div>
+  <hr class="fancy-line"></hr>
+  <button type="button" class="btn btn-default btn-md" id="collapse-button">
+    <span class="glyphicon glyphicon-chevron-up" id="collapse-button-span" style="vertical-align:top;margin-top:-5px" aria-hidden="true"></span> 
+  </button>
+  <div class="row">
+    <div class="col-md-8">
+      <div id="line-chart" class="col-md-10">
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+    <div class = "col-md-3">
+      <h5 id="network-header"> </h5>
+      <div id="network" class="graph"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="inferred1" class="col-md-8"></div>
+    <div id="contentContainer" class="col-md-4"></div>
+  </div>
+  <div class="row">
+    <div id="inferred"></div>
+  </div>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script>
+  var submit_voice_url = "{{url_for('submit_voice')}}";
+  </script>
+  <script data-main="{{ url_for('static', filename='js/main.js') }}" src="{{ url_for('static', filename='js/require.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/iconInteract.js') }}"></script>
+</body>
+</html>

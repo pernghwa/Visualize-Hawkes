@@ -1,0 +1,243 @@
+button:focus {outline:0 !important;}
+button:active {
+outline: none !important; 
+border: none;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.chart {
+	shape-rendering: crispEdges;
+}
+
+.mini text {
+	font: 9px sans-serif;
+}
+
+.main text {
+	font: 12px sans-serif;
+}
+
+.month text {
+	text-anchor: start;
+}
+
+.todayLine {
+	stroke: blue;
+	stroke-width: 1.5;
+}
+
+.axis line, .axis path {
+	stroke: black;
+  	fill: none;
+	shape-rendering: crispEdges;
+}
+
+.browser text {
+  text-anchor: end;
+}
+
+.future {
+	stroke: gray;
+	fill: #ddd;
+}
+
+.past {
+	stroke: green;
+	fill: lightgreen;
+}
+
+.brush .extent {
+	stroke: gray;
+	fill: blue;
+	fill-opacity: .165;
+}
+
+path.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+circle.data {
+  fill: #3157A7;
+	opacity: 0.5;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  fill: #000;
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+#edge-slider {
+     margin: 0 0;
+  }
+
+#contentContainer{
+	height: 380px;
+	width: 350px;
+}
+
+#articleContainer{ 
+  border:0;
+  display: block;
+  -moz-transform: scale(0.4, 0.4); 
+  -webkit-transform: scale(0.4, 0.4); 
+  -o-transform: scale(0.4, 0.4);
+  -ms-transform: scale(0.4, 0.4);
+  transform: scale(0.4, 0.4); 
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+
+.icon{
+	background-size: 80px 80px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	
+	display: inline-block; width: 80px; height: 80px;
+	border-width: 50px;
+	border-color: rgba(0,0,0,0);
+	
+	border-radius: 100%;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-ms-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+
+	border: 40px solid rgba(0, 0, 0, 0.7);
+
+}
+
+.icon-sm{
+	background-size:70px 70px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	
+	display: inline-block; width: 70px; height: 70px;
+	border-width: 40px;
+	border-color: rgba(0,0,0,0);
+	
+	border-radius: 100%;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-ms-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+
+	border:35px solid rgba(0, 0, 0, 0.5);
+}
+
+.icon-nudge{
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+.default-hover:hover{
+	border: 3px solid rgba(128, 128, 128, 0.5);	
+}
+
+.default-hover-activated{
+	border: 3px solid rgba(128, 128, 128, 0.5);	
+}
+
+.dem:hover{
+	border: 3px solid rgba(51, 153, 255, 0.5);	
+}
+
+.dem-activated{
+	border: 3px solid rgba(51, 153, 255, 0.5);	
+}
+
+.gop:hover{
+	border: 3px solid rgba(255, 10, 10, 0.5);
+}
+
+.gop-activated{
+	border: 3px solid rgba(255, 10, 10, 0.5);	
+}
+
+hr.fancy-line { 
+    border: 0; 
+    height: 1px;
+    position: relative;
+    margin: 0.5em 0; /* Keep other elements away from pseudo elements*/
+}
+hr.fancy-line:before {
+    top: -0.5em;
+    height: 1em;
+}
+hr.fancy-line:after {
+    content:'';
+    height: 0.5em;   /* half the height of :before */
+    top: 1px;        /* height of hr*/
+}
+
+hr.fancy-line:before, hr.fancy-line:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+}
+
+hr.fancy-line, hr.fancy-line:before {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(0,0,0,0.1)), color-stop(75%,rgba(0,0,0,0)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+
+#collapse-button{
+	position: absolute;
+	border-top: none !important;
+	margin-top: -8px;
+  	left: 50%;
+  	height: 20px;
+  	width: 50px;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(0,0,0,0.5)), color-stop(75%,rgba(0,0,0,0.3)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 75%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+
+.nv-y .tick text {
+visibility: none !important;
+opacity:0;
+}
+g.nv-axisMaxMin.nv-axisMaxMin-y.nv-axisMin-y text {
+visibility: none !important;
+opacity:0 !important;
+}
+g.nv-axisMaxMin.nv-axisMaxMin-y.nv-axisMax-y text {
+visibility: none !important;
+opacity:0 !important;
+}
